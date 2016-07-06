@@ -1,4 +1,4 @@
 function sendQuery(){
-	var log = document.GetElementById("log").innerHTML;
-	log += "Yo!<br />";
+	var log = document.getElementById("log");
+	log.innerHTML += "Yo!<br />";
 }

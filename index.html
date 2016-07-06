@@ -2,12 +2,22 @@
 	<head>
 		<meta charset="utf8" />
 		<title>Kalkulator</title>
+		<style>
+			#output,#log{
+				min-height: 10px;
+				border: 1px solid black;
+			}
+			p{
+				text-decoration: underline;
+				text-shadow: 1px 1px #F00;
+			}
+		</style>
 	</head>
 	<body>
 		<input type="text" id="input" name="input" />
-		<button id="butt" name="butt" action="sendQuery()">Send</button>
-		<div id="output"></div>
-		<div id="log"></div>
+		<button id="butt" name="butt" onClick="sendQuery()">Send</button>
+		<div id="output"><p>Output</p></div>
+		<div id="log"><p>Log</p></div>
 
 		<script src="script.js"></script> 
 		<!-- na samym końcu body, żeby został załadowany na końcu -->
