@@ -2,20 +2,40 @@
 	<head>
 		<meta charset="utf8" />
 		<title>Kalkulator</title>
-		<style>
+		<style type="text/css">
+			body
+			{
+				background-image:  url("bgc.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+						
+				}
 			#output,#log{
+				margin: 30px;
 				min-height: 10px;
-				border: 1px solid black;
+				outline-style: dotted;
+			
+			}
+			#inputy{
+				text-align: center;
+				margin-top: 100px;
 			}
 			p{
+				color: purple;
+				font-family: "Comic Sans MS";
+				text-align: left;
 				text-decoration: underline;
-				text-shadow: 1px 1px #F00;
+				
 			}
 		</style>
 	</head>
 	<body>
-		<input type="text" id="input" name="input" />
-		<button id="butt" name="butt" onClick="sendQuery()">Send</button>
+
+		<div id="inputy">
+			<input type="text" id="input" name="input"/>
+			<button id="butt" name="butt" onClick="sendQuery()">Send</button>
+		</div>
+		
 		<div id="output"><p>Output</p></div>
 		<div id="log"><p>Log</p></div>
 
