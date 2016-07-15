@@ -1,12 +1,40 @@
 function sendQuery(){
 	var log = document.getElementById("log");
-	log.innerHTML += "Yo!<br />";
+	var str = document.getElementById("input").value.replace(/\s+/g, '');
+	log.innerHTML += str + "<br/>";
+	var wynik = getMeWynik(str);
 }
-function tr33lol(){
-	var log = document.getElementById("log");
-	log.innerHTML += "trololo<br />";
+function getMeWynik(str) 
+{
+	var strArray = str.split('');
+	var cos = new Array();
+	
+
 }
-function trololo2l(){
-	var log = document.getElementById("log");
-	  log.innerHTML += "Niy!<br />";
+function checkIfOperator(zmienna)
+{
+	switch (zmienna)
+	{	
+		case "+":
+			return true; 
+			break; 
+		case "-":
+			return true;
+		    break;
+		case "*":
+			return true;
+		    break;
+		case "/":
+			return true;
+		    break;
+		case "=":
+			return true;
+		    break;
+		case "s":
+			return "?";
+			break;
+		default:
+		    return false;
+	}	
+	
 }
