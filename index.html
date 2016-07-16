@@ -10,36 +10,70 @@
 				background-size: cover;
 						
 				}
-			#output,#log{
+			/*#output,#log{
 				margin: 30px;
 				min-height: 10px;
 				outline-style: dotted;
+				background-color: grey;
+				opacity: 0.5;
 			
+			}*/
+			div.transbox {
+				margin: 30px;
+				min-height: 10px;
+				outline-style: dotted;
+				background-color: grey;
+				opacity: 0.5;
+
 			}
-			#inputy{
-				text-align: center;
-				margin-top: 100px;
-			}
-			p{
+			div.transbox p{
+				font-weight: bold;
 				color: purple;
 				font-family: "Comic Sans MS";
 				text-align: left;
 				text-decoration: underline;
-				
 			}
+			#inputy{
+				text-align: center;
+				margin-top: 200px;
+
+			}
+			button{
+				cursor: pointer;
+				padding: 5px 25px;
+				background:#6b6dbb ;
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+				border-radius: 10px;
+				/*give the button a drop shadow*/
+				-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+				-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+				box-shadow: 0 0 4px rgba(0,0,0, .75);
+				/*style the text*/
+				color:#f3f3f3;
+				font-size:1.5em;
+
+			}
+					
 		</style>
 	</head>
 	<body>
 
 		<div id="inputy">
-			<input type="text" id="input" name="input"/>
+			<input type="text" id="input" name="input" style="font-size: 20pt; height: 40px" size="60px"/>
 			<button id="butt" name="butt" onClick="sendQuery()">Send</button>
 		</div>
 		
-		<div id="output"><p>Output</p></div>
-		<div id="log"><p>Log</p></div>
+		<div class="transbox" id="output">
+			<p>Output</p>
+		</div>
+		
+		<div class="transbox" id="log">
+			<p>Log</p>
+		</div>
 
 		<script src="script.js"></script> 
-		<!-- na samym końcu body, żeby został załadowany na końcu -->
+	
 	</body>
+
 </html>
