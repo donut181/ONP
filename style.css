@@ -1,18 +1,7 @@
-body
-{
-	background-image:  url("bgc.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-			
-	}
-/*#output,#log{
-	margin: 30px;
-	min-height: 10px;
-	outline-style: dotted;
-	background-color: grey;
-	opacity: 0.5;
-
-}*/
+body{
+	padding: 0;
+	margin: 0;
+}
 div.transbox {
 	margin: 30px;
 	min-height: 10px;
@@ -47,5 +36,11 @@ button{
 	/*style the text*/
 	color:#f3f3f3;
 	font-size:1.5em;
-
+}
+img{
+	width: 100%;
+	margin: 0;
+	position: fixed;
+	bottom:0px;
+	z-index: -10; /* to jest do trzeciego wymiaru (kolejność elementów na wierzchu)*/
 }
