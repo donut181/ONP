@@ -2,8 +2,11 @@ function sendQuery(){
 	document.getElementById("output").innerHTML = "";
 	var log = document.getElementById("log");
 	var str = document.getElementById("input").value.replace(/\s+/g, '');
+	//var strreplace = str.replace( /\d+/g, ' ');
+	//log.innerHTML = strreplace + "<br/>";
 	log.innerHTML = str + "<br/>";
-	var wynik = getMeWynik(str);
+	//var wynik = getMeWynik(str);
+	//str.match(/[-/*+^()]|\d+/g) dzielenie na array wszystkie elementy stringu
 }
 
 function getMeWynik(str) 
@@ -41,11 +44,15 @@ function myfunction(element, index, array)
 		log.innerHTML += "dodaje element " + element + "do stackOperators <br />";
 		stackOperators.push(element);
 	}
-	else if (element!="("&&element!=")")
+	else if (element != "(" && element != ")")
+	{
 		outputAdd(element);
+	}
+	
 	/*Jeśli dojdziemy do końca wyrażenia, to ze stosu operatorów pobieramy operatory 
 	i przenosimy je kolejno na wyjście aż do wyczyszczenia stosu. Algorytm kończymy.*/
-	if(index == array.length-1){
+	if(index == array.length-1)
+	{
 		log.innerHTML+= stackOperators.toString();
 	}
 }
